@@ -1,0 +1,91 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    margin: 0;
+    padding-left: 350px;
+}
+
+#game {
+    text-align: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+    background-color: #fce4ec;
+}
+
+.playerX {
+    color: #ff6384;
+}
+
+.playerO {
+    color: #d71b47;
+}
+
+.winning-cell {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px #fff;
+    }
+
+    to {
+        box-shadow: 0 0 30px #ff6384, 0 0 40px #ff9a9e;
+    }
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+#restartButton {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6384;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#restartButton:hover {
+    background-color: #ff3b69;
+}
+
+.cartoon img {
+    width: 80%;
+    height: 80vh;
+}
